@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receive Data</title>
+</head>
+<body>
+  <h2>Received Data</h2>
+  <div id="receivedData"></div>
+
+  <script>
+    // Parse the URL parameters to get the data sent from the other website
+    const urlParams = new URLSearchParams(window.location.search);
+    const receivedData = urlParams.get('data');
+
+    // Display the received data on the page
+    const receivedDataElement = document.getElementById('receivedData');
+    receivedDataElement.textContent = `Received Data: ${receivedData}`;
+  </script>
+</body>
+</html>
+
